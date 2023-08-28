@@ -1,0 +1,28 @@
+# the-project-front
+the-project-front/logs
+the-project-front/*.log
+the-project-front/npm-debug.log*
+the-project-front/yarn-debug.log*
+the-project-front/yarn-error.log*
+the-project-front/pnpm-debug.log*
+the-project-front/lerna-debug.log*
+
+the-project-front/node_modules
+the-project-front/.DS_Store
+the-project-front/dist
+the-project-front/dist-ssr
+the-project-front/coverage
+the-project-front/*.local
+
+the-project-front/cypress/videos/
+the-project-front/cypress/screenshots/
+
+# Editor directories and files
+**/.vscode/*
+**/!.vscode/extensions.json
+**/.idea
+**/*.suo
+**/*.ntvs*
+**/*.njsproj
+**/*.sln
+**/*.sw?

@@ -1,35 +1,75 @@
-@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+html,
+body,
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0px;
+  height: 100%;
+};
 
-  font-weight: normal;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
+@layer base {
+  :root, .console_theme {
+    --color-cover: #1b1b1b;
+    --color-background: #000;
+    --color-base: #22c55e;
+    --color-secondary: #fff;
+    --color-muted: #202020;
+    --color-inverted: #52b3d0;
+    --color-hover: #1b8843;
+    --color-placeholder: #4d4d4d;
+    background-color: var(--color-cover);
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+  .light-theme {
+    --color-cover: #c0c0c0;
+    --color-background: #fff;
+    --color-base: #52b3d0;
+    --color-secondary: #202020;
+    --color-muted: #000;
+    --color-inverted: #22c55e;
+    --color-hover: #357588;
+    --color-placeholder: #4d4d4d;
+    background-color: var(--color-cover);
   }
-}
+
+  .red-theme {
+    --color-cover: #c0c0c0;
+    --color-background: #fff;
+    --color-base: #d43e3e;
+    --color-secondary: #202020;
+    --color-muted: #000;
+    --color-inverted: #52b3d0;
+    --color-hover: #8d2d2d;
+    --color-placeholder: #4d4d4d;
+    background-color: var(--color-cover);
+  }
+
+  a {
+    @apply text-skin-secondary;
+    @apply hover:underline;
+  };
+  h1, h2, h3 {
+    @apply text-skin-base;
+  };
+  p, span {
+    @apply text-skin-secondary;
+  };
+  button {
+    @apply p-1 rounded transition ease-in-out text-skin-secondary bg-skin-base active:bg-skin-base hover:bg-skin-hover hover:scale-105 focus:scale-105 focus:outline-none;
+  };
+  input {
+    @apply p-1 rounded transition ease-in-out text-skin-secondary placeholder:text-skin-placeholder border border-skin-base hover:scale-105 focus:scale-105 bg-transparent focus:outline-none;
+  };
+};
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+};
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+};

@@ -11,20 +11,20 @@ function signin() {
 </script>
 
 <template>
-  <div class="bg-white justify-center flex flex-wrap gap-y-2 p-2">
-    <div class="w-full text-left">
-      <span class="text-black">Username</span>
-    </div>
-    <BaseInput v-model="user"></BaseInput>
-    <div class="w-full text-left">
-      <span class="text-black">Password</span>
-    </div>
-    <BaseInput v-model="password" type="password"></BaseInput>
-    <div class="w-full text-center pt-2">
+  <div class="">
+    <h2 class="text-2xl font-semibold mb-4">Login</h2>
+    <form>
+      <div class="mb-4">
+        <BaseInput v-model="user" placeholder="Username"></BaseInput>
+      </div>
+      <div class="mb-4">
+        <BaseInput v-model="password" type="password" placeholder="Password" required></BaseInput>
+      </div>
       <BaseButton @click="signin()">Sign in</BaseButton>
-    </div>
+    </form>
   </div>
 </template>
 
 <style scoped>
 </style>
+

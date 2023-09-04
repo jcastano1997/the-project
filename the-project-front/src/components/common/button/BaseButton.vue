@@ -16,6 +16,7 @@ function callback(e: Event) {
 
 <template>
   <button
+  class="w-full py-2 px-4 rounded-lg"
   :class="type"
   :disabled="disabled"
   @click="callback($event)">
@@ -24,12 +25,9 @@ function callback(e: Event) {
 </template>
 
 <style scoped>
-.normal {
-  background-color: #000;
-  color: #fff;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  border: none;
-  cursor: pointer;
+.outline {
+  background-color: transparent;
+  color: var(--color-text-base);
+  border-color: var(--color-text-base);
 }
 </style>

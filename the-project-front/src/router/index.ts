@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import BaseLayout from '../layouts/BaseLayout.vue'
 import SignInView from '../views/account/SignInView.vue'
 import SignUpView from '../views/account/SignInView.vue'
 import RecoveryView from '../views/account/RecoveryView.vue'
@@ -9,6 +10,9 @@ const router = createRouter({
     {
       path: '/',
       name: 'signin',
+      meta: {
+        layout: BaseLayout,
+      },
       component: SignInView
     },
     {

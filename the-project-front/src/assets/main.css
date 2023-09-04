@@ -57,19 +57,9 @@ body,
     @apply text-skin-secondary;
   };
   button {
-    @apply p-1 rounded transition ease-in-out text-skin-secondary bg-skin-base active:bg-skin-base hover:bg-skin-hover hover:scale-105 focus:scale-105 focus:outline-none;
+    @apply p-1 transition ease-in-out rounded text-skin-secondary bg-skin-base active:bg-skin-base hover:bg-skin-hover hover:scale-105 focus:scale-105 focus:outline-none;
   };
   input {
-    @apply p-1 rounded transition ease-in-out text-skin-secondary placeholder:text-skin-placeholder border border-skin-base hover:scale-105 focus:scale-105 bg-transparent focus:outline-none;
+    @apply p-1 transition ease-in-out bg-transparent border rounded text-skin-secondary placeholder:text-skin-placeholder border-skin-base hover:scale-105 focus:scale-105 focus:outline-none;
   };
-};
-
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.5s ease;
-};
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
 };

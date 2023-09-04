@@ -3,11 +3,11 @@ import ThemeSwitcher from './ThemeSwitcher.vue'
 import LanguageSwitcher from './LanguageSwitcher.vue'
 </script>
 <template>
-    <div class="bg-skin-background flex justify-between">
-        <div>
-            <RouterLink class="" to="/">Home</RouterLink>
+    <div class="flex justify-between p-1 bg-skin-background">
+        <div class="">
+            <RouterLink class="" to="/">{{ $t('message.home') }}</RouterLink>
         </div>
-        <div class="flex">
+        <div class="flex gap-x-1">
             <ThemeSwitcher/>
             <LanguageSwitcher/>
         </div>

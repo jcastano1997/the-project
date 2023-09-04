@@ -1,35 +1,40 @@
 <template>
-    <div class="relative flex flex-wrap">
+    <div class="flex flex-wrap">
         <div>
-            <button class="p-0" :class="{'bg-skin-hover':show}" v-on:click="show = !show"><i id="change-language-icon" class="fa-solid fa-globe p-1 text-skin-secondary"></i></button>
+            <button class="p-0" :class="{'bg-skin-hover':show}">
+                <i id="change-language-icon" v-on:click="show = !show" class="p-1 fa-solid fa-globe text-skin-secondary"></i>
+            </button>
         </div>
-        <transition>
-            <div id="change-language-div" v-if="show" class="w-full px-4 py-2 absolute w-56 text-center bg-skin-background right-0 top-6 rounded border border-skin-base">
+        <transition name="fade">
+            <div id="change-language-div" v-if="show" class="absolute right-0 w-auto px-4 py-2 text-center border rounded bg-skin-background top-7 border-skin-base">
                 <label id="change-language-label"
                     for="languages"
-                    class="text-skin-base"
-                    >CHOOSE A LANGUAGE</label
+                    class="text-skin-base">{{ $t('message.language.choose') }}</label
                 >
                 <select id="change-language-select"
                     v-model="language"
                     @input="changeLanguage"
-                    class="w-full cursor-pointer text-sm mt-1 text-skin-secondary bg-transparent border border-skin-base rounded"
+                    class="w-full mt-1 text-sm bg-transparent border rounded cursor-pointer text-skin-secondary border-skin-base"
                 >
-                    <option value="es" class="bg-skin-background">es</option>
-                    <option value="en" class="bg-skin-background">en</option>
+                    <option value="es" class="bg-skin-background">{{ $t('message.language.es') }}</option>
+                    <option value="en" class="bg-skin-background">{{ $t('message.language.en') }}</option>
                 </select>
             </div>
         </transition>
     </div>
 </template>
 <script setup lang="ts">
+import { i18n } from '@/i18n'
 import { ref, onMounted } from 'vue'
+import { useLocaleStore } from '@/stores/locale'
 
 const show = ref<boolean>(false);
-const language = ref<string>('es');
+const store = useLocaleStore()
+const { language } = store
 
 function changeLanguage(e: Event) {
-    language.value = e.target.value;
+    store.changeLanguage(e.target.value);
+    i18n.global.locale = e.target.value;
     show.value = false;
 }
 
@@ -46,3 +51,19 @@ onMounted(()=>{
     });
 })
 </script>
+<style>
+.fade-enter-active {
+  animation: fade-in .25s;
+}
+.fade-leave-active {
+  animation: fade-in .25s reverse;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+</style>

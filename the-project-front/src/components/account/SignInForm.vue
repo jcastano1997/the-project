@@ -12,15 +12,15 @@ function signin() {
 
 <template>
   <div class="">
-    <h2 class="text-2xl font-semibold mb-4">Login</h2>
+    <h2 class="mb-4 text-2xl font-semibold">{{ $t('message.account.login') }}</h2>
     <form>
       <div class="mb-4">
-        <BaseInput v-model="user" placeholder="Username"></BaseInput>
+        <BaseInput v-model="user" :placeholder="$t('message.account.username')" required></BaseInput>
       </div>
       <div class="mb-4">
-        <BaseInput v-model="password" type="password" placeholder="Password" required></BaseInput>
+        <BaseInput v-model="password" type="password" :placeholder="$t('message.account.password')" required></BaseInput>
       </div>
-      <BaseButton @click="signin()">Sign in</BaseButton>
+      <BaseButton @click="signin()">{{ $t('message.account.signin') }}</BaseButton>
     </form>
   </div>
 </template>

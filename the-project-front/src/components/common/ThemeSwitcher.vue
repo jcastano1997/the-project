@@ -6,7 +6,7 @@
             </button>
         </div>
         <transition name="bounce">
-            <div id="change-theme-div" v-if="show" class="absolute right-0 w-auto px-4 py-2 text-center border rounded top-7 bg-skin-background border-skin-base">
+            <div id="change-theme-div" v-if="show" class="absolute w-auto px-4 py-2 text-center border rounded right-7 top-7 bg-skin-background border-skin-base">
                 <label id="change-theme-label"
                     for="themes"
                     class="text-skin-base">{{ $t('message.theme.choose') }}</label
@@ -66,7 +66,7 @@ onMounted(()=>{
     transform: scale(0);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);

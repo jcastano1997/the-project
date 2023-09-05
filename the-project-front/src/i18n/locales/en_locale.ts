@@ -3,11 +3,16 @@ const en_locale = {
         hello: "Hello {name}",
         account: {
             login: "Login",
+            email: "Email",
             username: "Username",
             password: "Password",
-            signin: "Sign in",
+            recovery_password: "Recovery password",
+            repeat_password: "Repeat password",
+            continue: "Continue",
             forgotpassword: "Forgot your password?",
-            register: "I want to register"
+            register: "Register",
+            want_register: "I want to register",
+            have_credentials: "I already have credentials",
         },
         language: {
             choose: "CHOOSE A LANGUAGE",

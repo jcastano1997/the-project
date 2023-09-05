@@ -20,7 +20,7 @@ function signin() {
       <div class="mb-4">
         <BaseInput v-model="password" type="password" :placeholder="$t('message.account.password')" required></BaseInput>
       </div>
-      <BaseButton @click="signin()">{{ $t('message.account.signin') }}</BaseButton>
+      <BaseButton @click="signin()">{{ $t('message.account.continue') }}</BaseButton>
     </form>
   </div>
 </template>

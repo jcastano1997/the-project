@@ -12,11 +12,7 @@ import SignInForm from '../../components/account/SignInForm.vue'
           <RouterLink to="/signin/recovery">{{ $t('message.account.forgotpassword') }}</RouterLink>
         </div>
         <div class="text-center">
-          <RouterLink to="/signup">{{ $t('message.account.register') }}</RouterLink>
-        </div>
-        <div class="w-full text-center">
-        </div>
-        <div class="w-full text-center">
+          <RouterLink to="/signup">{{ $t('message.account.want_register') }}</RouterLink>
         </div>
       </div>
     </div>

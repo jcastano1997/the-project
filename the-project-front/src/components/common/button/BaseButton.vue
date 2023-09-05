@@ -1,25 +1,32 @@
 <script setup lang="ts">
+import type { PropType, ButtonHTMLAttributes } from 'vue';
+
 defineProps({
   disabled: {
     type: Boolean,
     default: false
   },
   type: {
+    type: String as PropType<ButtonHTMLAttributes['type']>,
+    default: 'button'
+  },
+  class: {
     type: String,
     default: 'normal'
+  },
+  allowed: {
+    type: Boolean,
+    default: true
   }
 })
-function callback(e: Event) {
-  this.$emit('click', (e.target as HTMLInputElement).value)
-}
 </script>
 
 <template>
   <button
-  class="w-full py-2 px-4 rounded-lg"
-  :class="type"
-  :disabled="disabled"
-  @click="callback($event)">
+  class="w-full px-4 py-2 rounded-lg"
+  :class="{'button-disabled': disabled || !allowed}"
+  :type="type"
+  :disabled="disabled">
     <slot></slot>
   </button>
 </template>

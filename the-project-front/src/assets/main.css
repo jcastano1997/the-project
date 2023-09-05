@@ -56,10 +56,19 @@ body,
   p, span {
     @apply text-skin-secondary;
   };
-  button {
-    @apply p-1 transition ease-in-out rounded text-skin-secondary bg-skin-base active:bg-skin-base hover:bg-skin-hover hover:scale-105 focus:scale-105 focus:outline-none;
+  button, [type='button'], [type='reset'], [type='submit'] {
+    @apply p-1 transition ease-in-out rounded cursor-pointer text-skin-secondary bg-skin-base active:bg-skin-base hover:bg-skin-hover hover:scale-105 focus:scale-105 focus:outline-none;
+  };
+  .button-disabled {
+    @apply cursor-not-allowed text-skin-base bg-skin-secondary active:bg-skin-secondary hover:bg-skin-secondary hover:scale-100 focus:scale-100;
   };
   input {
     @apply p-1 transition ease-in-out bg-transparent border rounded text-skin-secondary placeholder:text-skin-placeholder border-skin-base hover:scale-105 focus:scale-105 focus:outline-none;
+  };
+  .input-error {
+    @apply border-red-700;
+  }
+  .input-errors {
+    @apply text-red-700;
   };
 };

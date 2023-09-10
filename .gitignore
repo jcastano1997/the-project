@@ -17,6 +17,24 @@ the-project-front/*.local
 the-project-front/cypress/videos/
 the-project-front/cypress/screenshots/
 
+# the-project-api
+the-project-api/.bundle
+the-project-api/db/*.sqlite3
+the-project-api/db/*.sqlite3-*
+the-project-api/log/*
+the-project-api/tmp/*
+!the-project-api/log/.keep
+!the-project-api/tmp/.keep
+the-project-api/tmp/pids/*
+!the-project-api/tmp/pids/
+!the-project-api/tmp/pids/.keep
+the-project-api/storage/*
+!the-project-api/storage/.keep
+the-project-api/tmp/storage/*
+!the-project-api/tmp/storage/
+!the-project-api/tmp/storage/.keep
+the-project-api/config/master.key
+
 # Editor directories and files
 **/.vscode/*
 **/!.vscode/extensions.json

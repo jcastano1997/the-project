@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import SignInForm from '../../components/account/SignInForm.vue'
+import { SIGNUP_PATH, RECOVERY_PASSWORD_PATH } from '@/router/constants';
 </script>
 
 <template>
@@ -9,10 +10,10 @@ import SignInForm from '../../components/account/SignInForm.vue'
       <div class="p-8">
         <SignInForm/>
         <div class="mt-8 mb-4 text-center">
-          <RouterLink to="/signin/recovery">{{ $t('message.account.forgotpassword') }}</RouterLink>
+          <RouterLink :to="RECOVERY_PASSWORD_PATH">{{ $t('message.account.forgotpassword') }}</RouterLink>
         </div>
         <div class="text-center">
-          <RouterLink to="/signup">{{ $t('message.account.want_register') }}</RouterLink>
+          <RouterLink :to="SIGNUP_PATH">{{ $t('message.account.want_register') }}</RouterLink>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import SignUpForm from '../../components/account/SignUpForm.vue'
+import { SIGNIN_PATH } from '@/router/constants';
 </script>
 
 <template>
@@ -9,7 +10,7 @@ import SignUpForm from '../../components/account/SignUpForm.vue'
       <div class="p-8">
         <SignUpForm/>
         <div class="mt-8 text-center">
-          <RouterLink to="/">{{ $t('message.account.have_credentials') }}</RouterLink>
+          <RouterLink :to="SIGNIN_PATH">{{ $t('message.account.have_credentials') }}</RouterLink>
         </div>
       </div>
     </div>

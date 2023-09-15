@@ -33,7 +33,8 @@ defineEmits(['update:modelValue'])
       class="w-full px-3 py-2 rounded-lg"
       :class="{'input-error': error}"
       :value="modelValue"
-      @input="(e: Event) => $emit('update:modelValue', (e.target as HTMLInputElement).value)">
+      @input="(e: Event) => $emit('update:modelValue', (e.target as HTMLInputElement).value)"
+      @keyup="$emit('onKeyup')">
     <div class="input-errors" v-for="error of error_mensages" :key="error.$uid">
       <div class="error-msg">{{ error.$message }}</div>
     </div>

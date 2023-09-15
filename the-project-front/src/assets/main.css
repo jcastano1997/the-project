@@ -18,7 +18,7 @@ body,
     --color-muted: #202020;
     --color-inverted: #52b3d0;
     --color-hover: #1b8843;
-    --color-placeholder: #4d4d4d;
+    --color-placeholder: #7e7e7e;
     background-color: var(--color-cover);
   }
 
@@ -30,7 +30,7 @@ body,
     --color-muted: #000;
     --color-inverted: #22c55e;
     --color-hover: #357588;
-    --color-placeholder: #4d4d4d;
+    --color-placeholder: #979797;
     background-color: var(--color-cover);
   }
 

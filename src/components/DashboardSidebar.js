@@ -5,8 +5,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClose, faBurger, faHouse, faBlog, faNewspaper, faEraser, faLinesLeaning, faStore, faUser } from "@fortawesome/free-solid-svg-icons"
 import { CSSTransition } from "react-transition-group"
 import "./DashboardSidebar.css"
+import { useSelector } from "react-redux"
 
 export default function DashboardSidebar() {
+    const selectedTheme = useSelector((state) => state.theme.selectedTheme)
     const [isExpanded, setIsExpanded] = React.useState(false)
     const nodeRef = React.useRef(null)
     const bgRef = React.useRef(null)
@@ -14,7 +16,7 @@ export default function DashboardSidebar() {
     return (<div className={`flex absolute h-full ${isExpanded ? "w-full" : ""}`}>
         <Sidebar rootStyles={{
             [`.${sidebarClasses.container}`]: {
-            backgroundColor: 'white',
+            backgroundColor: `var(--color-${selectedTheme}-bg)`,
             },
         }} collapsed={!isExpanded}>
             <Menu>
@@ -39,7 +41,7 @@ export default function DashboardSidebar() {
             timeout={300}
             classNames="hide"
             unmountOnExit>
-            <div ref={bgRef} className="w-full bg-green-500/30" onClick={() => setIsExpanded(!isExpanded)}></div>
+            <div ref={bgRef} className="w-full bg-white/50" onClick={() => setIsExpanded(!isExpanded)}></div>
         </CSSTransition>
     </div>)
 }

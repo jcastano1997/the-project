@@ -1,9 +1,0 @@
-export const HOME_PATH = '/'
-export const ACCOUNT_SLUG = '/account'
-export const SIGNIN_SLUG = '/sign-in'
-export const SIGNIN_PATH = `${ACCOUNT_SLUG}${SIGNIN_SLUG}`
-export const SIGNUP_SLUG = '/sign-up'
-export const SIGNUP_PATH = `${ACCOUNT_SLUG}${SIGNUP_SLUG}`
-export const RECOVERY_PASSWORD_SLUG = '/recovery-password'
-export const RECOVERY_PASSWORD_PATH = `${ACCOUNT_SLUG}${RECOVERY_PASSWORD_SLUG}`
-export const BLOG_PATH = '/blog'

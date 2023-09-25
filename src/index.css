@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --color-theme-light-bg-body: #cccccc;
   --color-theme-light-bg: #ffffff;
@@ -5,7 +9,7 @@
   --color-theme-light-text-secondary: #2e2e2e;
   --color-theme-light-primary: #8cc970;
   --color-theme-light-primary-darkness: #77aa5f;
-  --color-theme-light-secondary: #7f55ff;
+  --color-theme-light-secondary: #bba4ff;
   --color-theme-light-secondary-darkness: #5d2fe3;
   --color-theme-light-warning: #df3434;
   --color-theme-dark-bg-body: #222222;
@@ -18,10 +22,6 @@
   --color-theme-dark-secondary-darkness: #5d2fe3;
   --color-theme-dark-warning: #df3434;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 html, body, #root {
   width: 100%;

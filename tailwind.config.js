@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+module.exports = ({
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -32,5 +33,10 @@ module.exports = {
     }
   },
   plugins: [],
-}
-
+  safelist: [
+    {
+      pattern: /(text|border|bg)-(theme-light|theme-dark)-(bg-body|bg|text|text-secondary|primary|primary-darkness|secondary|secondary-darkness|warning)/,
+      variants: ['focus','peer-focus']
+    }
+  ]
+})

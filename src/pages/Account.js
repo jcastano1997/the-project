@@ -1,4 +1,4 @@
-import { supabase } from "../App"
+import { supabase } from "../SupabaseClient"
 import { useSelector } from "react-redux"
 
 export default function Account() {
@@ -6,6 +6,7 @@ export default function Account() {
 
     const logout = async () => {
         const { error } = await supabase.auth.signOut()
+        console.log(error)
     }
 
     return (<div className="w-full h-full">

@@ -8,7 +8,11 @@ export default function Layout() {
     <div className={`flex w-full h-full text-${selectedTheme}-text bg-${selectedTheme}-bg-body`}>
       <DashboardSidebar />
       <div className={`w-full h-full pl-20`}>
-        <Outlet />
+        <div className={`relative w-full h-full`}>
+          <div className={`w-full h-full max-w-xl mx-auto shadow p-10 overflow-y-auto bg-${selectedTheme}-bg `}>
+            <Outlet />
+          </div>
+        </div>
       </div>
     </div>
   )

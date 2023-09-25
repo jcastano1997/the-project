@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { Sidebar, Menu, MenuItem, SubMenu, sidebarClasses } from "react-pro-sidebar"
+import { Sidebar, Menu, MenuItem, SubMenu, sidebarClasses, menuClasses } from "react-pro-sidebar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClose, faBurger, faHouse, faBlog, faNewspaper, faEraser, faLinesLeaning, faStore, faUser } from "@fortawesome/free-solid-svg-icons"
 import { CSSTransition } from "react-transition-group"
@@ -16,7 +16,10 @@ export default function DashboardSidebar() {
     return (<div className={`flex absolute h-full ${isExpanded ? "w-full" : ""}`}>
         <Sidebar rootStyles={{
             [`.${sidebarClasses.container}`]: {
-            backgroundColor: `var(--color-${selectedTheme}-bg)`,
+                backgroundColor: `var(--color-${selectedTheme}-bg)`,
+            },
+            [`.${menuClasses.button}`]: {
+                backgroundColor: `var(--color-${selectedTheme}-bg)`,
             },
         }} collapsed={!isExpanded}>
             <Menu>

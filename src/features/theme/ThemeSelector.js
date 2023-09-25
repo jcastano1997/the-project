@@ -16,6 +16,6 @@ export const ThemeSelector = () => {
     }
 
     return (<div className="">
-        <Select options={options} value={options.find((option) => option.value == selectedTheme)} onChange={handleChange} />
+        <Select options={options} value={options.find((option) => option.value === selectedTheme)} onChange={handleChange} />
     </div>)
 }

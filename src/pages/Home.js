@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+import { faCoffee, faLanguage } from "@fortawesome/free-solid-svg-icons"
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import { LightBulb } from "../components/LightBulb"
 
 export default function Home() {
@@ -19,6 +20,9 @@ export default function Home() {
                         <button>Configure</button>
                     </div>
                 </div>
+            </div>
+            <div className="p-20" style={{"background-color": "#fff"}}>
+                <FontAwesomeIcon size="60px" style={{"color": "#bd3f2e"}} className="text-white fa-2xl" icon={faLanguage} />
             </div>
             <div className="absolute top-0 flex w-full h-full select-none" style={{"z-index": "0"}}>
                 <div className="mx-auto my-auto">

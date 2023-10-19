@@ -173,6 +173,7 @@ Important: swaggerUI is disabled for the production env
 For the sake of readability, you may build an image with custom name i.e. **net.ts**, go to the root project (where the Dockerfile is) and execute:
 
 `docker build -t net.ts .`
+for me: `docker build -t jcastano1997/the-project:v1 .`
 
 When done, execute the docker run command to create a container from a net.ts image and starts the container with all the required environment variables:
 
